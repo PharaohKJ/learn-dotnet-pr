@@ -10,8 +10,18 @@ int number2 = int.Parse(input2 ?? "0");
 Console.WriteLine($"入力された値: {number1}, {number2}");
 
 // 足し算と引き算の計算
-int sum = number1 + number2;
-int difference = number1 - number2;
+int sum = CalculateSum(number1, number2);
+int difference = CalculateDifference(number1, number2);
 
 Console.WriteLine($"足し算の結果: {number1} + {number2} = {sum}");
 Console.WriteLine($"引き算の結果: {number1} - {number2} = {difference}");
+
+static int CalculateSum(int a, int b)
+{
+    return a + b;
+}
+
+static int CalculateDifference(int a, int b)
+{
+    return a - b;
+}
